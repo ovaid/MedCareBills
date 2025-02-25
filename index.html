@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAJAR MEDICAL STORE - Bill Format</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1><img src="./Blue Green White Simple Modern Medical Logo.png" style="border-radius: 50%; width: 150px; height: 150px;"></h1>
+    <h1><img src="./Blue and White Illustrative Doctor Health Care Logo.png" style="border-radius: 30%; width: 200px; height: 200px;float: right; margin-top: -160px;"></h1>
+  </header>
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-prescription-bottle-alt"></i> NAJAR MEDICAL STORE
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inspired</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">By</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">OvaidMushtaq</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="rameezConnect">
+                        <img src="./phone_1304116.png" style="height: 30px; width: 30px;">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <main>
+    <form>
+      <header>
+        <div class="company">
+          <div class="name"><strong style="color: rgb(122, 7, 7);font-weight: 700;">NAJAR<p style="font-weight: 700; color: rgb(0, 0, 0); font-size: 30px; display: inline;"> & </p>Co.</strong></div>
+          <div class="address" style="color: crimson;">
+            Sombruna Main Market</br>
+            
+          </div>
+        </div>
+        <h2 style="color: rgb(122, 7, 7);font-weight: 700;">NAJAR<p style="color: black; display: inline;">'S</p></h2>
+      </header>
+      <div class="customer">
+        <!-- <div class="info">
+          <div class="bill-to"><strong>bill-to</strong></div>
+          <div>
+            Disneyland</br>
+            1313 Disneyland Dr</br>
+            Anaheim, CA 92802
+          </div>
+        </div> -->
+        <!-- <div class="invoice">
+          <table>
+            <tr>
+              <th>Bill</th>
+              <td>127563003</td>
+            </tr>
+            <tr>
+              <th>Invoice #</th>
+              <td>0982788</td>
+            </tr>
+            <tr>
+              <th>Date</th>
+              <td>7/31/2024</td>
+            </tr>
+            <tr>
+              <th>Terms</th>
+              <td>Net 30</td>
+            </tr>
+          </table>
+        </div> -->
+      </div>
+      <div class="management-form">
+        <input type="hidden" name="invoice-TOTAL_FORMS" value="1" id="id_invoice-TOTAL_FORMS">
+        <input type="hidden" name="invoice-INITIAL_FORMS" value="1" id="id_invoice-INITIAL_FORMS">
+        <input type="hidden" name="invoice-MIN_NUM_FORMS" value="1" id="id_invoice-MIN_NUM_FORMS">
+        <input type="hidden" name="invoice-MAX_NUM_FORMS" value="10" id="id_invoice-MAX_NUM_FORMS">
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Price</th>
+            <th>QTY</th>
+            <th>Received</th>
+            <th>Selled</th>
+            <th>Amount</th>
+          </tr>
+          <tr class="item">
+            <td>
+              <input type="text" name="invoice-0-desc" id="id_invoice-0-desc" value="Item 1">
+            </td>
+            <td><input type="text" name="invoice-0-price" id="id_invoice-0-price" value="1"></td>
+            <td><input type="text" name="invoice-0-qty" id="id_invoice-0-qty" value="5"></td>
+            <td><input type="text" name="invoice-0-received" id="id_invoice-0-received" value="0"></td>
+            <td><input type="text" name="invoice-0-selled" id="id_invoice-0-selled" value="0"></td>
+            <td><input type="text" name="invoice-0-amount" id="id_invoice-0-amount" disabled value="$5.00"></td>
+          </tr>
+          <tr>
+            <td>
+              <button type="button" class="clone">Add Item</button>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th>Total</th>
+            <th>
+              <input type="text" name="total" id="id_total" value="$5.00" disabled>
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </form>
+    <div class="footer">
+      <a href="https://github.com/ovaid" target="_blank">&copy; 2023 NAJAR MEDICAL STORE. </a><a href="https://github.com/ovaid" target="_blank">All rights reserved.</a>
+    </div>
+  </main>
+  <script src="script.js"></script>
+
+</body>
+</html>
