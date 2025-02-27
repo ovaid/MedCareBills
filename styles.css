@@ -1,199 +1,327 @@
 body {
-    --overlap: 10rem;
-    --border-thickness: 1px;
-    --theme-color: #1a237e;
-  }
-  
-  body > header {
-    padding: 2rem 2rem var(--overlap) 2rem;
-    background-image: radial-gradient(#0336ff, #000);
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  h1 {
-    color: #fff;
-    margin-top: 0;
-  }
-  
-  form {
-    margin: calc(var(--overlap) * -1) auto 0 auto;
-    width: 80%;
-    max-width: 700px;
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.5);
-    position: relative;
-    padding: 1rem;
-    overflow: scroll;
-  }
-  
-  form > header {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-bottom: 2rem;
-  }
-  
-  form > header > * {
-    flex: 0 0 auto;
-  }
-  
-  .company .name,
-  .customer .bill-to {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    text-transform: capitalize;
-  }
-  
-  form > header h2 {
-    margin-left: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    text-transform: uppercase;
-    font-size: 2rem;
-  }
-  
-  .customer {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-bottom: 3rem;
-  }
-  
-  .customer > * {
-    flex: 0 0 auto;
-  }
-  
-  .customer .invoice {
-    margin-left: auto;
-  }
-  
-  .customer .invoice th {
-    padding-right: 0.5rem;
-    text-align: right;
-  }
-  
-  form > table {
-    width: 100%;
-    /*   border-collapse: collapse; */
-  }
-  
-  form > table th {
-    background: var(--theme-color);
-    color: #fff;
-  }
-  
-  form > table th {
-    padding: 0.35rem 0.75rem;
-  }
-  
-  form > table td {
-    padding: 0.35rem 0;
-  }
-  
-  form > table th:first-child,
-  form > table td:first-child {
-    text-align: left;
-  }
-  
-  form > table th:last-child,
-  form > table td:last-child {
-    text-align: right;
-    max-width: 100px;
-  }
-  
-  form > table td:last-child > input {
-    text-align: right;
-  }
-  
-  form > table th:nth-child(2),
-  form > table td:nth-child(2),
-  form > table th:nth-child(3),
-  form > table td:nth-child(3) {
-    max-width: 100px;
-  }
-  
-  form > table td:nth-child(2) input,
-  form > table td:nth-child(3) input {
-    text-align: center;
-  }
-  
-  form > table tr:last-child button {
-    background: inherit;
-    border: 1px solid var(--theme-color);
-    padding: 0.35rem 0.75rem;
-    color: var(--theme-color);
-    border-radius: 2px;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-  
-  form > table tr:last-child button:hover {
-    background: var(--theme-color);
-    color: #fff;
-  }
-  
-  form > table tr:last-child input {
-    background: transparent;
-    color: #fff;
-    text-align: right;
-    padding: 0;
-  }
-  
-  input {
-    width: 100%;
-    margin: 0;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    box-sizing: border-box;
-    padding: 0.35rem 0.75rem;
-    font-size: 1rem;
-  }
-  
-  input.error {
-    border-color: #d50000;
-  }
-  
-  input[disabled] {
-    border: none;
-  }
-  
-  .footer {
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  /* template */
-  
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-    background: #f8f9fa;
-    font-family: sans-serif;
-  }
-  .custom-navbar {
-    background: linear-gradient(90deg, #4b6cb7, #182848) !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --overlap: 10rem;
+  --border-thickness: 1px;
+  --theme-color: #1a237e;
+  background-video: url("https://media.gettyimages.com/id/1359580340/video/microscope-research-experiment.mp4?s=mp4-640x640-gi&k=20&c=Js1y6xm6N0TMUUN-IuQ5A6qV6FDtyZgbzYEDWPE0Yuk=");
+
 }
 
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
+body > header {
+  padding: 2rem 2rem var(--overlap) 2rem;
+  background-image: radial-gradient(#0336ff, #000);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.navbar-brand i {
-    margin-right: 10px;
-}  
-form > table th:nth-child(4),
-form > table td:nth-child(4),
-form > table th:nth-child(5),
-form > table td:nth-child(5) {
-  max-width: 100px;
+h1 {
+  color: #fff;
+  margin-top: 0;
 }
 
+form {
+  margin: calc(var(--overlap) * -1) auto 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 5px 15px rgb(0, 0, 0, 0.5);
+  position: relative;
+  padding: 1rem;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  
+
+}
+
+form > header {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 2rem;
+}
+
+form > header > * {
+  flex: 0 0 auto;
+}
+
+.company .name,
+.customer .bill-to {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+form > header h2 {
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+form > table {
+  width: 100%;
+}
+
+form > table th {
+  background: var(--theme-color);
+  color: #fff;
+  padding: 0.35rem 0.75rem;
+}
+
+form > table td {
+  padding: 0.35rem 0;
+}
+
+form > table td:last-child > input {
+  text-align: right;
+}
+
+form > table td:nth-child(2) input,
+form > table td:nth-child(3) input,
 form > table td:nth-child(4) input,
 form > table td:nth-child(5) input {
   text-align: center;
 }
+
+form > table tr:last-child button {
+  background: inherit;
+  border: 1px solid var(--theme-color);
+  padding: 0.35rem 0.75rem;
+  color: var(--theme-color);
+  border-radius: 2px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+form > table tr:last-child button:hover {
+  background: var(--theme-color);
+  color: #fff;
+}
+
+form > table tr:last-child input {
+  background: transparent;
+  color: #080808;
+  /* text-align: left; */
+  padding: 5x;
+
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: 0.35rem 0.75rem;
+  font-size: 1rem;
+}
+
+input.error {
+  border-color: #d50000;
+}
+
+input[disabled] {
+  border: none;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff0000;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.delete-btn:hover {
+  color: #cc0000;
+}
+
+.delete-btn:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+/* .nav-item{
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+} */
+#navBar-navIttems{
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+
+}
+
+/* Ensure text wraps in input fields */
+input[type="text"] {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  margin:
+0;
+  border:
+1px solid #ccc;
+  border-radius:
+2px;
+  box-sizing: border-box;
+  padding:
+0.35rem 0.75rem;
+  font-size: 1rem;
+}
+
+/* Style for the plus button */
+.add-btn {
+  background: none;
+  border: none;
+  color: #28a745; /* Green color */
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+.add-btn:hover {
+  color: #218838; /* Darker green on hover */
+}
+
+/* Style for the delete button */
+.delete-btn {
+  background: none;
+  border: none;
+  color: #dc3545; /* Red color */
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.delete-btn:hover {
+  color: #c82333; /* Darker red on hover */
+}
+
+.delete-btn:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+
+
+        /* Floating WhatsApp Button */
+        .floating-button {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+          transition: transform 0.3s ease-in-out;
+      }
+
+      /* WhatsApp Button */
+      .whatsapp-button {
+          background-color: #25D366;
+          bottom: 20px; /* Positioned above the call button */
+      }
+
+      /* Call Button */
+      .call-button {
+          background-color: #007BFF;
+      }
+
+      /* Button Icons */
+      .floating-button img {
+          width: 35px;
+          height: 35px;
+      }
+
+      /* Hover Effect */
+      .floating-button:hover {
+          transform: scale(1.1);
+      }
+
+      /* Click Animation */
+      .floating-button:active {
+          transform: scale(0.9);
+      }
+
+              /* Floating WhatsApp Button */
+              .call-button {
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                transition: transform 0.3s ease-in-out;
+            }
+      
+      
+            /* Call Button */
+            .call-button {
+                background-color: #007BFF;
+            }
+      
+            /* Button Icons */
+            .call-button img {
+                width: 35px;
+                height: 35px;
+            }
+      
+            /* Hover Effect */
+            .call-button:hover {
+                transform: scale(1.1);
+            }
+      
+            /* Click Animation */
+            .call-button:active {
+                transform: scale(0.9);
+            }
+
+
+                    /* Video Container */
+        .video-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          z-index: -1;
+      }
+
+      /* Video Element */
+      .video-container video {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          object-fit: cover;
+      }
+
+      /* Content on Top of Video */
+      .content {
+          position: relative;
+          z-index: 1;
+          color: white;
+          text-align: center;
+          font-size: 24px;
+          font-family: Arial, sans-serif;
+          margin-top: 20%;
+      }

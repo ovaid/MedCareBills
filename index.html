@@ -12,8 +12,17 @@
 <header>
     <h1><img src="./Blue Green White Simple Modern Medical Logo.png" style="border-radius: 50%; width: 150px; height: 150px;"></h1>
     <h1><img src="./Blue and White Illustrative Doctor Health Care Logo.png" style="border-radius: 30%; width: 200px; height: 200px;float: right; margin-top: -160px;"></h1>
-  </header>
-  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+</header>
+
+<div class="floating-button whatsapp-button" onclick="openWhatsApp()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</div>
+
+<!-- Call Floating Button -->
+<div class="floating-button call-button" onclick="callPhone()">
+    <img src="./telephone.png" alt="Call">
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar" id="navBar-navIttems">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <i class="fas fa-prescription-bottle-alt"></i> NAJAR MEDICAL STORE
@@ -41,94 +50,81 @@
         </div>
     </div>
 </nav>
-  <main>
+<div class="video-container">
+    <video autoplay muted loop>
+        <source src="./istockphoto-1985112728-640_adpp_is.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+
+<main>
     <form>
-      <header>
-        <div class="company">
-          <div class="name"><strong style="color: rgb(122, 7, 7);font-weight: 700;">NAJAR<p style="font-weight: 700; color: rgb(0, 0, 0); font-size: 30px; display: inline;"> & </p>Co.</strong></div>
-          <div class="address" style="color: crimson;">
-            Sombruna Main Market</br>
-            
-          </div>
+        <header>
+            <div class="company">
+                <div class="name"><strong style="color: rgb(122, 7, 7);font-weight: 700;">NAJAR<p style="font-weight: 700; color: rgb(0, 0, 0); font-size: 30px; display: inline;"> & </p>Co.</strong></div>
+                <div class="address" style="color: crimson;">
+                    Sombruna Main Market</br>
+                </div>
+            </div>
+            <h2 style="color: rgb(122, 7, 7);font-weight: 700;">NAJAR<p style="color: black; display: inline;">'S</p></h2>
+        </header>
+        <div class="management-form">
+            <input type="hidden" name="invoice-TOTAL_FORMS" value="1" id="id_invoice-TOTAL_FORMS">
+            <input type="hidden" name="invoice-INITIAL_FORMS" value="1" id="id_invoice-INITIAL_FORMS">
+            <input type="hidden" name="invoice-MIN_NUM_FORMS" value="1" id="id_invoice-MIN_NUM_FORMS">
+            <input type="hidden" name="invoice-MAX_NUM_FORMS" value="110" id="id_invoice-MAX_NUM_FORMS">
         </div>
-        <h2 style="color: rgb(122, 7, 7);font-weight: 700;">NAJAR<p style="color: black; display: inline;">'S</p></h2>
-      </header>
-      <div class="customer">
-        <!-- <div class="info">
-          <div class="bill-to"><strong>bill-to</strong></div>
-          <div>
-            Disneyland</br>
-            1313 Disneyland Dr</br>
-            Anaheim, CA 92802
-          </div>
-        </div> -->
-        <!-- <div class="invoice">
-          <table>
-            <tr>
-              <th>Bill</th>
-              <td>127563003</td>
-            </tr>
-            <tr>
-              <th>Invoice #</th>
-              <td>0982788</td>
-            </tr>
-            <tr>
-              <th>Date</th>
-              <td>7/31/2024</td>
-            </tr>
-            <tr>
-              <th>Terms</th>
-              <td>Net 30</td>
-            </tr>
-          </table>
-        </div> -->
-      </div>
-      <div class="management-form">
-        <input type="hidden" name="invoice-TOTAL_FORMS" value="1" id="id_invoice-TOTAL_FORMS">
-        <input type="hidden" name="invoice-INITIAL_FORMS" value="1" id="id_invoice-INITIAL_FORMS">
-        <input type="hidden" name="invoice-MIN_NUM_FORMS" value="1" id="id_invoice-MIN_NUM_FORMS">
-        <input type="hidden" name="invoice-MAX_NUM_FORMS" value="10" id="id_invoice-MAX_NUM_FORMS">
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Description</th>
-            <th>Price</th>
-            <th>QTY</th>
-            <th>Received</th>
-            <th>Selled</th>
-            <th>Amount</th>
-          </tr>
-          <tr class="item">
-            <td>
-              <input type="text" name="invoice-0-desc" id="id_invoice-0-desc" value="Item 1">
-            </td>
-            <td><input type="text" name="invoice-0-price" id="id_invoice-0-price" value="1"></td>
-            <td><input type="text" name="invoice-0-qty" id="id_invoice-0-qty" value="5"></td>
-            <td><input type="text" name="invoice-0-received" id="id_invoice-0-received" value="0"></td>
-            <td><input type="text" name="invoice-0-selled" id="id_invoice-0-selled" value="0"></td>
-            <td><input type="text" name="invoice-0-amount" id="id_invoice-0-amount" disabled value="$5.00"></td>
-          </tr>
-          <tr>
-            <td>
-              <button type="button" class="clone">Add Item</button>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <th>Total</th>
-            <th>
-              <input type="text" name="total" id="id_total" value="$5.00" disabled>
-            </th>
-          </tr>
-        </thead>
-      </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Received</th>
+                    <th>Selled</th>
+                    <th>Price</th>
+                    <th>inStock</th>
+                    <th>Total</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="item">
+                    <td>
+                        <input type="text" name="invoice-0-desc" id="id_invoice-0-desc" value="Item 1">
+                    </td>
+                    <td><input type="text" name="invoice-0-received" id="id_invoice-0-received" value="0"></td>
+                    <td><input type="text" name="invoice-0-selled" id="id_invoice-0-selled" value="0"></td>
+                    <td><input type="text" name="invoice-0-price" id="id_invoice-0-price" value="1"></td>
+                    <td><input type="text" name="invoice-0-inStock" id="id_invoice-0-inStock" disabled></td>
+                    <td><input type="text" name="invoice-0-total" id="id_invoice-0-total" disabled></td>
+                    <td><input type="text" name="invoice-0-amount" id="id_invoice-0-amount" disabled></td>
+                    <td style="display: flex;">
+                        <button type="button" class="delete-btn" disabled><i class="fas fa-trash" style="display:inline;" disabled></i></button>
+                        <button type="button" class="add-btn"><i class="fas fa-plus" style="display:inline;"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <th>Total</th>
+                    <th>
+                        <input type="text" name="total" id="id_total" disabled style="color: white;width:300px;"">
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
     </form>
     <div class="footer">
-      <a href="https://github.com/ovaid" target="_blank">&copy; 2023 NAJAR MEDICAL STORE. </a><a href="https://github.com/ovaid" target="_blank">All rights reserved.</a>
+        <a href="https://github.com/ovaid" target="_blank" style="color: yellow;font-weight: 700;">&copy; 2024 NAJAR MEDICAL STORE. </a><a href="https://github.com/ovaid" target="_blank" style="color: White;font-weight: 700;">All rights reserved.</a>
     </div>
-  </main>
-  <script src="script.js"></script>
+</main>
 
+<script src="script.js"></script>
 </body>
 </html>
