@@ -325,3 +325,23 @@ input[type="text"] {
           font-family: Arial, sans-serif;
           margin-top: 20%;
       }
+
+       @media (max-width: 768px) {
+        .table-responsive-sm {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .table {
+            width: 100%;
+        }
+    } 
+    
+   
+    
+     /* .table th:nth-child(n+2), 
+    .table td:nth-child(n+2) {
+        width: -10%; 
+    }  */
+
+
+    

@@ -9,19 +9,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <h1><img src="./Blue Green White Simple Modern Medical Logo.png" style="border-radius: 50%; width: 150px; height: 150px;"></h1>
-    <h1><img src="./Blue and White Illustrative Doctor Health Care Logo.png" style="border-radius: 30%; width: 200px; height: 200px;float: right; margin-top: -160px;"></h1>
+<header class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 text-center">
+            <h1><img src="./Blue Green White Simple Modern Medical Logo.png" class="img-fluid" style="border-radius: 50%; width: 150px; height: 150px;"></h1>
+        </div>
+        <div class="col-12 col-md-6 text-center">
+            <h1><img src="./Blue and White Illustrative Doctor Health Care Logo.png" class="img-fluid" style="border-radius: 30%; width: 200px; height: 200px;"></h1>
+        </div>
+    </div>
 </header>
 
-<div class="floating-button whatsapp-button" onclick="openWhatsApp()">
+<div class="floating-button whatsapp-button position-fixed bottom-0 end-0 m-3" onclick="openWhatsApp()">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </div>
 
 <!-- Call Floating Button -->
-<div class="floating-button call-button" onclick="callPhone()">
+<div class="floating-button call-button position-fixed bottom-0 start-0 m-3" onclick="callPhone()">
     <img src="./telephone.png" alt="Call">
 </div>
+
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar" id="navBar-navIttems">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -50,16 +57,28 @@
         </div>
     </div>
 </nav>
+
 <div class="video-container">
-    <video autoplay muted loop>
+    <video autoplay muted loop class="w-100">
         <source src="./istockphoto-1985112728-640_adpp_is.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+        
 </div>
 
+<main class="container">
 
-<main>
+    
     <form>
+            <!-- Search Bar -->
+            <main class="container">
+                <div class="mb-3 position-relative">
+                    <input type="text" class="form-control ps-5 pe-5" id="searchInput" placeholder="Search Description..." onkeyup="searchDescription()" style="background-color: rgb(61, 61, 92); color: azure;">
+            
+                    <!-- Search Icon (left) -->
+                    <i class="fas fa-search position-absolute top-50 start-0 translate-middle-y ms-3" style="color: azure;"></i>
+            
+                    <!-- Clear Icon (right) -->
+                    <i class="fas fa-times position-absolute top-50 end-0 translate-middle-y me-3" style="color: azure; cursor: pointer;" onclick="clearSearch()"></i>
+                </div> 
         <header>
             <div class="company">
                 <div class="name"><strong style="color: rgb(122, 7, 7);font-weight: 700;">NAJAR<p style="font-weight: 700; color: rgb(0, 0, 0); font-size: 30px; display: inline;"> & </p>Co.</strong></div>
@@ -75,7 +94,7 @@
             <input type="hidden" name="invoice-MIN_NUM_FORMS" value="1" id="id_invoice-MIN_NUM_FORMS">
             <input type="hidden" name="invoice-MAX_NUM_FORMS" value="110" id="id_invoice-MAX_NUM_FORMS">
         </div>
-        <table>
+        <table class="table table-bordered table-responsive-sm">
             <thead>
                 <tr>
                     <th>Description</th>
@@ -88,7 +107,7 @@
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tableBody">
                 <tr class="item">
                     <td>
                         <input type="text" name="invoice-0-desc" id="id_invoice-0-desc" value="Item 1">
@@ -114,17 +133,47 @@
                     <td></td>
                     <th>Total</th>
                     <th>
-                        <input type="text" name="total" id="id_total" disabled style="color: white;width:300px;"">
+                        <input type="text" name="total" id="id_total" disabled style="color: white;width:350px; background-color: blue; font-weight: 600;">
                     </th>
                 </tr>
             </tfoot>
         </table>
     </form>
-    <div class="footer">
-        <a href="https://github.com/ovaid" target="_blank" style="color: yellow;font-weight: 700;">&copy; 2024 NAJAR MEDICAL STORE. </a><a href="https://github.com/ovaid" target="_blank" style="color: White;font-weight: 700;">All rights reserved.</a>
-    </div>
-</main>
 
+</main>
+<div class="footer text-center">
+    <a href="https://github.com/ovaid" target="_blank" style="color: yellow;font-weight: 700;">&copy; 2024 NAJAR MEDICAL STORE. </a><a href="https://github.com/ovaid" target="_blank" style="color: White;font-weight: 700;">All rights reserved.</a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="script.js"></script>
+
+<!-- Add the following script to enable search functionality -->
+<script>
+     function searchDescription() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tableBody");
+    tr = table.getElementsByTagName("tr");
+
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0]; // Search in the first column (Description)
+        if (td) {
+            txtValue = td.querySelector('input').value || ''; // Grab the value of the input in the description column
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
+
+    function clearSearch() {
+        document.getElementById("searchInput").value = ''; // Clear the input field
+        searchDescription(); // Reset the table display to show all rows
+    }
+</script>
+
 </body>
 </html>
