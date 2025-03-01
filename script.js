@@ -65,7 +65,7 @@ document.addEventListener("click", (event) => {
             cloneForm(".item", formPrefix, false, initializeItem);
             saveRowsToLocalStorage();
         } catch (error) {
-            alert(error.message);
+            // alert(error.message);
         }
     }
 });
