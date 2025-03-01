@@ -80,13 +80,15 @@
                     <i class="fas fa-times position-absolute top-50 end-0 translate-middle-y me-3" style="color: azure; cursor: pointer;" onclick="clearSearch()"></i>
                 </div> 
         <header>
-            <div class="company">
-                <div class="name"><strong style="color: rgb(122, 7, 7);font-weight: 700;">NAJAR<p style="font-weight: 700; color: rgb(0, 0, 0); font-size: 30px; display: inline;"> & </p>Co.</strong></div>
-                <div class="address" style="color: crimson;">
-                    Sombruna Main Market</br>
+            <div class="company" style="display: flex; justify-content: space-between;">
+                <div>
+                    <div class="name"><strong style="color: rgb(122, 7, 7);font-weight: 700;">NAJAR<p style="font-weight: 700; color: rgb(0, 0, 0); font-size: 30px; display: inline;"> & </p>Co.</strong></div>
+                    <div class="address" style="color: crimson;">
+                        Sombruna Main Market</br><br>
+                    </div>
                 </div>
+                <h2 style="color: rgb(122, 7, 7);font-weight: 700;">NAJAR<p style="color: black; display: inline;">'S</p></h2>
             </div>
-            <h2 style="color: rgb(122, 7, 7);font-weight: 700;">NAJAR<p style="color: black; display: inline;">'S</p></h2>
         </header>
         <div class="management-form">
             <input type="hidden" name="invoice-TOTAL_FORMS" value="1" id="id_invoice-TOTAL_FORMS">
@@ -102,7 +104,7 @@
                     <th>Selled</th>
                     <th>Price</th>
                     <th>inStock</th>
-                    <th>Total</th>
+                    <!-- <th>Total</th> -->
                     <th>Amount</th>
                     <th>Action</th>
                 </tr>
@@ -112,12 +114,12 @@
                     <td>
                         <input type="text" name="invoice-0-desc" id="id_invoice-0-desc" value="Item 1">
                     </td>
-                    <td><input type="text" name="invoice-0-received" id="id_invoice-0-received" value="0"></td>
-                    <td><input type="text" name="invoice-0-selled" id="id_invoice-0-selled" value="0"></td>
-                    <td><input type="text" name="invoice-0-price" id="id_invoice-0-price" value="1"></td>
-                    <td><input type="text" name="invoice-0-inStock" id="id_invoice-0-inStock" disabled></td>
-                    <td><input type="text" name="invoice-0-total" id="id_invoice-0-total" disabled></td>
-                    <td><input type="text" name="invoice-0-amount" id="id_invoice-0-amount" disabled></td>
+                    <td><input type="text" name="invoice-0-received" id="id_invoice-0-received" value="0" class="inputs-four"></td>
+                    <td><input type="text" name="invoice-0-selled" id="id_invoice-0-selled" value="0" class="inputs-four"></td>
+                    <td><input type="text" name="invoice-0-price" id="id_invoice-0-price" value="1" class="inputs-four"></td>
+                    <td><input type="text" name="invoice-0-inStock" id="id_invoice-0-inStock" disabled class="inputs-four"></td>
+                    <!-- <td><input type="text" name="invoice-0-total" id="id_invoice-0-total" disabled class="inputs-four"></td> -->
+                    <td><input type="text" name="invoice-0-amount" id="id_invoice-0-amount" disabled class="inputs-four"></td>
                     <td style="display: flex;">
                         <button type="button" class="delete-btn" disabled><i class="fas fa-trash" style="display:inline;" disabled></i></button>
                         <button type="button" class="add-btn"><i class="fas fa-plus" style="display:inline;"></i></button>
