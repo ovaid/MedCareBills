@@ -356,7 +356,7 @@ input[type="text"] {
 
     form > table th,
     form > table td {
-        white-space: nowrap;
+        /*white-space: nowrap;*/
     }
 }
 
