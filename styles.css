@@ -336,7 +336,30 @@ input[type="text"] {
         }
     } 
     
-   
+   @media (max-width: 768px) {
+    .form-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    form {
+        display: block; /* Ensure form is a block for better scrolling */
+        min-width: 900px; /* Ensures the form does not shrink */
+        width: max-content;
+    }
+
+    form > table {
+        white-space: nowrap;
+        min-width: 900px;
+    }
+
+    form > table th,
+    form > table td {
+        white-space: nowrap;
+    }
+}
+
     
      /* .table th:nth-child(n+2), 
     .table td:nth-child(n+2) {
